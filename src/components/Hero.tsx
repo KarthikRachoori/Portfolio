@@ -81,7 +81,7 @@ const Hero = () => {
           {/* Profile Photo - Right Side */}
           <div className="flex-shrink-0">
             <img 
-              src="/images/profile-photo.jpg"
+              src="src/assets/profile-photo.jpg"
               alt="Karthik Rachoori - Professional Photo"
               className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 object-cover border-2 border-border"
               onError={(e) => {
