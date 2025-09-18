@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Debug Test</title>
+</head>
+<body>
+    <h1>Image Debug Test</h1>
+    <p>Testing different image paths:</p>
+    
+    <h2>Method 1: Direct public path</h2>
+    <img src="/images/profile-photo.jpg" alt="Public path" style="width: 200px; height: 200px; border: 1px solid red;">
+    
+    <h2>Method 2: Placeholder</h2>
+    <img src="/placeholder.svg" alt="Placeholder" style="width: 200px; height: 200px; border: 1px solid blue;">
+    
+    <h2>Console Check</h2>
+    <p>Open browser dev tools and check console for any 404 errors.</p>
+    
+    <script>
+        // Test if images load
+        const img1 = new Image();
+        img1.onload = () => console.log('Public image loaded successfully');
+        img1.onerror = () => console.error('Public image failed to load');
+        img1.src = '/images/profile-photo.jpg';
+        
+        const img2 = new Image();
+        img2.onload = () => console.log('Placeholder loaded successfully');
+        img2.onerror = () => console.error('Placeholder failed to load');
+        img2.src = '/placeholder.svg';
+    </script>
+</body>
+</html>
